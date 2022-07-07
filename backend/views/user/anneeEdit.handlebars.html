@@ -1,0 +1,26 @@
+<h1> {{Notebooktittle}} </h1>
+
+<div class="container">
+<form action="/admin/annee/edit" method="POST" >
+    
+    
+<h2>Modifier Annee Universitaire</h2>
+  <div class="form-group">
+      <label for="name">Date de Debut d'Annee: {{annee.datedeb}}</label>
+      <input type="date" class="form-control" name="datedeb" id="date" aria-describedby="date" value="{{annee.datedeb}}" placeholder="date">
+      <small id="emailHelp" class="form-text text-muted">Le {{annee.datedeb}} </small>
+    </div> 
+    <div class="form-group">
+      <label for="name">Date de Fin d'Annee:{{annee.datefin}}</label>
+      <input type="date" class="form-control" name="datefin" id="date" aria-describedby="date" value="{{annee.datefin}}" placeholder="date">
+      <small id="emailHelp" class="form-text text-muted">Le {{annee.datefin}} </small>
+    </div> 
+    <div class="form-group">
+      <label for="name">Deadline du PFE:{{annee.delai}}</label>
+      <input type="date" class="form-control" name="delai" id="date" aria-describedby="date" value="{{annee.delai}}" placeholder="date">
+      <small id="emailHelp" class="form-text text-muted">Le {{annee.delai}} </small>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+</form>
+</div>

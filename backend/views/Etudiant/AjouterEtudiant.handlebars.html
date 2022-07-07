@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+  <title>Bootstrap 4 Dashboard</title>
+  <base target="_self">
+  <meta name="description" content="A Bootstrap 4 admin dashboard theme that will get you started. The sidebar toggles off-canvas on smaller screens. This example also include large stat blocks, modal and cards. The top navbar is controlled by a separate hamburger toggle button."
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" value="notranslate">
+  <link rel="shortcut icon" href="/images/cp_ico.png">
+
+
+  <!--stylesheets / link tags loaded here-->
+
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style>
+body {
+	color: #999;
+	background: #f3f3f3;
+	font-family: 'Roboto', sans-serif;
+}
+.form-control {
+	border-color: #eee;
+	min-height: 41px;
+	box-shadow: none !important;
+}
+.form-control:focus {
+	border-color: #5cd3b4;
+}
+.form-control, .btn {        
+	border-radius: 3px;
+}
+.signup-form {
+	width: 500px;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+.signup-form h2 {
+	color: #333;
+	margin: 0 0 30px 0;
+	display: inline-block;
+	padding: 0 30px 10px 0;
+	border-bottom: 3px solid #5cd3b4;
+}
+.signup-form form {
+	color: #999;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	background: #fff;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	padding: 30px;
+}
+.signup-form .form-group row {
+	margin-bottom: 20px;
+}
+.signup-form label {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 2;
+}
+.signup-form input[type="checkbox"] {
+	position: relative;
+	top: 1px;
+}
+.signup-form .btn {        
+	font-size: 16px;
+	font-weight: bold;
+	background: #5cd3b4;
+	border: none;
+	margin-top: 20px;
+	min-width: 140px;
+}
+.signup-form .btn:hover, .signup-form .btn:focus {
+	background: #41cba9;
+	outline: none !important;
+}
+.signup-form a {
+	color: #5cd3b4;
+	text-decoration: underline;
+}
+.signup-form a:hover {
+	text-decoration: none;
+}
+.signup-form form a {
+	color: #5cd3b4;
+	text-decoration: none;
+}	
+.signup-form form a:hover {
+	text-decoration: underline;
+}
+
+ 
+    @media screen and (max-width: 48em) {
+      .row-offcanvas {
+        position: relative;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+      }
+      .row-offcanvas-left .sidebar-offcanvas {
+        left: -33%;
+      }
+      .row-offcanvas-left.active {
+        left: 33%;
+        margin-left: -6px;
+      }
+      .sidebar-offcanvas {
+        position: absolute;
+        top: 0;
+        width: 33%;
+        height: 100%;
+      }
+    }
+    /*
+ * Off Canvas wider at sm breakpoint
+ * --------------------------------------------------
+ */
+    
+    @media screen and (max-width: 34em) {
+      .row-offcanvas-left .sidebar-offcanvas {
+        left: -45%;
+      }
+      .row-offcanvas-left.active {
+        left: 45%;
+        margin-left: -6px;
+      }
+      .sidebar-offcanvas {
+        width: 45%;
+      }
+    }
+    
+    .card {
+      overflow: hidden;
+    }
+    
+    .card-block .rotate {
+      z-index: 8;
+      float: right;
+      height: 100%;
+    }
+    
+    .card-block .rotate i {
+      color: rgba(20, 20, 20, 0.15);
+      position: absolute;
+      left: 0;
+      left: auto;
+      right: -10px;
+      bottom: 0;
+      display: block;
+      -webkit-transform: rotate(-44deg);
+      -moz-transform: rotate(-44deg);
+      -o-transform: rotate(-44deg);
+      -ms-transform: rotate(-44deg);
+      transform: rotate(-44deg);
+    }
+</style>
+</head>
+<body>
+
+<div class="signup-form">
+    <form action="/etudiant" method="post" class="form-horizontal">
+      	<div class="row">
+        	<div class="col-8 offset-4">
+				<h2>Ajouter etudiant</h2>
+			</div>	
+      	</div>			
+        <div class="form-group row">
+			<label class="col-form-label col-4">Username</label>
+			<div class="col-8">
+                <input type="text" class="form-control" name="name" required="required">
+            </div>        	
+        </div>
+		<div class="form-group row">
+			<label class="col-form-label col-4">Email Address</label>
+			<div class="col-8">
+                <input type="email" class="form-control" name="email" required="required">
+            </div>        	
+        </div>
+		<div class="form-group row">
+			<label class="col-form-label col-4">Telephone</label>
+			<div class="col-8">
+                <input type="text" class="form-control" name="phone" required="required">
+            </div>        	
+        </div>
+		<div class="form-group row">
+			<label class="col-form-label col-4">Password</label>
+			<div class="col-8">
+                <input type="password" class="form-control" name="password" required="required">
+            </div>        	
+        </div>
+		<div class="form-group row">
+			<label class="col-form-label col-4">Confirm Password</label>
+			<div class="col-8">
+                <input type="password" class="form-control" name="password2" required="required">
+            </div>        	
+        </div>
+		<div class="form-group row">
+			<div class="col-8 offset-4">
+				<button type="submit" class="btn btn-primary btn-lg">Ajouter</button>
+			</div>  
+		</div>		      
+    </form>
+</div>
+
+
+</body>
+</html>

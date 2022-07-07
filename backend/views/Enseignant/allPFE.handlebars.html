@@ -1,0 +1,72 @@
+<head>
+<style>
+    
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1300px !important
+    }
+}
+
+
+  .blockquote-custom {
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.blockquote-custom-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -25px;
+  left: 50px;
+}
+* {box-sizing: border-box;}
+
+</style>
+</head>
+  {{#if list includeZero=true}}
+        {{#if role}}
+ <br>
+ <div class="container">
+          <h1 style="color: firebrick;">Tous les Sujet PFE:</h1>
+          </div>
+    {{/if}}
+{{else}}
+<br><br>
+<div class="container">
+<h4 style="color: deeppink;">Il n'y a aucune Sujet PFE proposé</h4>
+</div>
+{{/if}}
+ 
+    
+{{#each list}}
+ <section class="py-5">
+    <div class="container">
+        <!-- FOR DEMO PURPOSE -->
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+
+                <!-- CUSTOM BLOCKQUOTE -->
+                <blockquote class="blockquote blockquote-custom bg-white p-5 shadow rounded">
+                    <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-quote-left text-white"></i></div>
+                    <p class="mb-0 mt-2 font-italic">"{{this.pfe}} <a href="#" class="text-info">@{{this.name}}</a>."</p>
+                      
+                    <footer class="blockquote-footer pt-4 mt-4 border-top">Ajouter par
+                        <cite title="Source Title">{{this.added_by_name}} </cite>
+                       <i class="fa fa-check" aria-hidden="true"></i>
+                      </a>
+                      <br>
+                      <br>
+                        
+                    </footer>
+                </blockquote><!-- END -->
+
+            </div>
+        </div>
+    </div>
+</section>
+  {{/each}}

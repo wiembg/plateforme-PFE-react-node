@@ -1,0 +1,26 @@
+<h1> {{Notebooktittle}} </h1>
+
+<div class="container">
+<form action="/admin/annee" method="POST" >
+    
+    
+
+  <div class="form-group">
+      <label for="name">Date de Debut d'Annee</label>
+      <input type="date" class="form-control" name="datedeb" id="date" aria-describedby="date" placeholder="date">
+      <small id="emailHelp" class="form-text text-muted">date Deb</small>
+    </div> 
+    <div class="form-group">
+      <label for="name">Date de Fin d'Annee</label>
+      <input type="date" class="form-control" name="datefin" id="date" aria-describedby="date" placeholder="date">
+      <small id="emailHelp" class="form-text text-muted">date Fin</small>
+    </div> 
+    <div class="form-group">
+      <label for="name">Deadline du PFE</label>
+      <input type="date" class="form-control" name="delai" id="date" aria-describedby="date" placeholder="date">
+      <small id="emailHelp" class="form-text text-muted">Delais</small>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+</form>
+</div>

@@ -1,0 +1,25 @@
+<h1> {{Notebooktittle}} </h1>
+
+<div class="container">
+<form action="/notebook" method="POST" >
+    
+    <div class="form-group">
+      <label for="name">Note Name</label>
+      <input type="name" class="form-control" id="name" name="name" aria-describedby="Note name" placeholder="Note name"  >
+      <small id="emailHelp" class="form-text text-muted">Name note</small>
+    </div>
+
+  <div class="form-group">
+      <label for="name">Note Date</label>
+      <input type="date" class="form-control" name="date" id="date" aria-describedby="date" placeholder="date">
+      <small id="emailHelp" class="form-text text-muted">date note</small>
+    </div>
+
+    <div class="form-group">
+      <label for="textarea">Note</label>
+      <textarea class="form-control" id="textnote" name="textnote" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>

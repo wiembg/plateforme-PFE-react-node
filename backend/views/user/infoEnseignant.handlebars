@@ -1,0 +1,16 @@
+
+<div class="container">
+<form>
+    
+    <div class="form-group">
+      <label for="name">{{Sujets.first.accepted_by_name}}</label>
+    </div>
+{{#each Sujets}}
+    <div class="form-group">
+      <label for="textarea">Sujet Du {{this.added_by_name}} </label>
+      <textarea class="form-control" id="textnote" name="textnote" rows="3">{{this.pfe}} </textarea>
+    </div>
+  {{/each}}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
